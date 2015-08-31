@@ -1,0 +1,25 @@
+RuleImpl rule = new RuleImpl();
+
+Vet aVet = new Vet();
+aVet.setAge(10);
+aVet.setFirstName("Brad");
+
+
+AndImplNode andNode1 = new AndImplNode();
+VetAgeRuleNode ageNode = new VetAgeRuleNode();
+//AndImplNode andNode1 = new AndImplNode();
+//VetFirstNameRuleNode firstNameNode = new VetFirstNameRuleNode();
+
+ageNode.setValue(Integer.valueOf(10));
+//firstNameNode.setValue("Brad");
+
+andNode1.getNodes().add(ageNode);
+
+rule.getNodes().add(andNode1);
+
+
+rule.execute(aVet);
+
+
+
+
