@@ -5,3 +5,17 @@
 .settings
 
 target
+
+/rule-engine-impl/.settings
+
+/rule-engine-impl/target
+
+/rule-engine-gui/.settings
+
+/rule-engine-gui/rule-engine-gui-domain/.settings
+
+/rule-engine-gui/rule-engine-gui-annotations/.settings
+
+/rule-engine-gui/rule-engine-gui-annotations/target
+
+/rule-engine-gui/rule-engine-annotations/target
