@@ -15,14 +15,14 @@ import java.util.ArrayList;
 public class RuleImpl implements Rule {
 
 	/** The nodes. */
-	private ArrayList<Node<?>> nodes = new ArrayList<Node<?>>();
+	private ArrayList<Node<?,?>> nodes = new ArrayList<Node<?,?>>();
 
 	/**
 	 * Gets the list of rule nodes.
 	 *
 	 * @return the nodes
 	 */
-	public ArrayList<Node<?>> getNodes() {
+	public ArrayList<Node<?,?>> getNodes() {
 		return nodes;
 	}
 
@@ -31,7 +31,7 @@ public class RuleImpl implements Rule {
 	 *
 	 * @param nodes the new nodes
 	 */
-	public void setNodes(ArrayList<Node<?>> nodes) {
+	public void setNodes(ArrayList<Node<?,?>> nodes) {
 		this.nodes = nodes;
 	}
 	
@@ -45,7 +45,7 @@ public class RuleImpl implements Rule {
 	public boolean execute(Object... data){
 
 		boolean result = true;
-		for (Node<?> node : this.getNodes()){
+		for (Node<?,?> node : this.getNodes()){
 			if (!node.execute(data)) {
 				result = false;
 				break;

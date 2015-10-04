@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.yare.api.Node;
 import org.yare.api.Rule;
+import org.yare.api.RuleNode;
 import org.yare.conditionals.impl.EqualsConditionImpl;
 import org.yare.conditionals.impl.GreaterThanConditionImpl;
 import org.yare.impl.RuleImpl;
@@ -28,23 +29,23 @@ public class RuleEngineTest {
 
 		//Build one rule node
 
-		RuleNodeImpl ruleNode1 = new RuleNodeImpl();
+		RuleNode<Vet,String> ruleNode1 = new RuleNodeImpl<Vet,String>();
 		ruleNode1.setObservableClass(Vet.class);
 		ruleNode1.setValue("Brad");
 		ruleNode1.setFieldName("firstName");
 		ruleNode1.setConditional(new EqualsConditionImpl());
 		
-		RuleNodeImpl ruleNode2 = new RuleNodeImpl();
+		RuleNodeImpl<Vet,Integer> ruleNode2 = new RuleNodeImpl<Vet,Integer>();
 		ruleNode2.setObservableClass(Vet.class);
 		ruleNode2.setValue(15);
 		ruleNode2.setFieldName("age");
 		ruleNode2.setConditional(new GreaterThanConditionImpl());
 		
 		
-		Node<Node<?>> andNode1 = new AndNodeImpl<Node<?>>();
+		Node<Vet,String> andNode1 = new AndNodeImpl<Vet,String>();
 		andNode1.getNodes().add(ruleNode1);
 		
-		Node<Node<?>> andNode2 = new AndNodeImpl<Node<?>>();
+		Node<Vet,Integer> andNode2 = new AndNodeImpl<Vet,Integer>();
 		andNode2.getNodes().add(ruleNode2);
 		
 		Rule rule = new RuleImpl();
@@ -70,23 +71,23 @@ public class RuleEngineTest {
 
 		//Build one rule node
 
-		RuleNodeImpl ruleNode1 = new RuleNodeImpl();
+		RuleNodeImpl<Vet,String> ruleNode1 = new RuleNodeImpl<Vet,String>();
 		ruleNode1.setObservableClass(Vet.class);
 		ruleNode1.setValue("Brad");
 		ruleNode1.setFieldName("firstName");
 		ruleNode1.setConditional(new EqualsConditionImpl());
 		
-		RuleNodeImpl ruleNode2 = new RuleNodeImpl();
+		RuleNodeImpl<Vet,Integer> ruleNode2 = new RuleNodeImpl<Vet,Integer>();
 		ruleNode2.setObservableClass(Vet.class);
 		ruleNode2.setValue(15);
 		ruleNode2.setFieldName("age");
 		ruleNode2.setConditional(new GreaterThanConditionImpl());
 		
 		
-		Node<Node<?>> andNode1 = new AndNodeImpl<Node<?>>();
+		Node<Vet,String> andNode1 = new AndNodeImpl<Vet,String>();
 		andNode1.getNodes().add(ruleNode1);
 		
-		Node<Node<?>> andNode2 = new AndNodeImpl<Node<?>>();
+		Node<Vet,Integer> andNode2 = new AndNodeImpl<Vet,Integer>();
 		andNode2.getNodes().add(ruleNode2);
 		
 		Rule rule = new RuleImpl();
@@ -109,23 +110,23 @@ public class RuleEngineTest {
 
 		//Build one rule node
 
-		RuleNodeImpl ruleNode = new RuleNodeImpl();
+		RuleNodeImpl<Vet,String> ruleNode = new RuleNodeImpl<Vet,String>();
 		ruleNode.setObservableClass(Vet.class);
 		ruleNode.setValue("Brads");
 		ruleNode.setFieldName("firstName");
 		ruleNode.setConditional(new EqualsConditionImpl());
 		
-		RuleNodeImpl ruleNode2 = new RuleNodeImpl();
+		RuleNodeImpl<Vet,Integer> ruleNode2 = new RuleNodeImpl<Vet,Integer>();
 		ruleNode2.setObservableClass(Vet.class);
 		ruleNode2.setValue(15);
 		ruleNode2.setFieldName("age");
 		ruleNode2.setConditional(new EqualsConditionImpl());
 		
 		
-		Node<Node<?>> andNode1 = new AndNodeImpl<Node<?>>();
+		Node<Vet,String> andNode1 = new AndNodeImpl<Vet,String>();
 		andNode1.getNodes().add(ruleNode);
 		
-		Node<Node<?>> notNode1 = new NotNodeImpl<Node<?>>();
+		Node<Vet,Integer> notNode1 = new NotNodeImpl<Vet,Integer>();
 		notNode1.getNodes().add(ruleNode2);
 	
 		
@@ -147,23 +148,23 @@ public class RuleEngineTest {
 
 		//Build one rule node
 
-		RuleNodeImpl ruleNode = new RuleNodeImpl();
+		RuleNodeImpl<Vet,String> ruleNode = new RuleNodeImpl<Vet,String>();
 		ruleNode.setObservableClass(Vet.class);
 		ruleNode.setValue("Brads");
 		ruleNode.setFieldName("firstName");
 		ruleNode.setConditional(new EqualsConditionImpl());
 		
-		RuleNodeImpl ruleNode2 = new RuleNodeImpl();
+		RuleNodeImpl<Vet,Integer> ruleNode2 = new RuleNodeImpl<Vet,Integer>();
 		ruleNode2.setObservableClass(Vet.class);
 		ruleNode2.setValue(10);
 		ruleNode2.setFieldName("age");
 		ruleNode2.setConditional(new EqualsConditionImpl());
 		
 		
-		Node<Node<?>> andNode1 = new AndNodeImpl<Node<?>>();
+		Node<Vet,String> andNode1 = new AndNodeImpl<Vet,String>();
 		andNode1.getNodes().add(ruleNode);
 		
-		Node<Node<?>> notNode1 = new NotNodeImpl<Node<?>>();
+		Node<Vet,Integer> notNode1 = new NotNodeImpl<Vet,Integer>();
 		notNode1.getNodes().add(ruleNode2);
 	
 		

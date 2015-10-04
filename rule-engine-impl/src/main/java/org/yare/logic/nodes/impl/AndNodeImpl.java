@@ -14,7 +14,7 @@ import org.yare.api.Node;
  *
  * @param <V> the value type
  */
-public class AndNodeImpl<V> extends LogicNodeImpl<V>  {
+public class AndNodeImpl<T,V> extends LogicNodeImpl<T,V>  {
 
 	
 	/* (non-Javadoc)
@@ -22,7 +22,7 @@ public class AndNodeImpl<V> extends LogicNodeImpl<V>  {
 	 */
 	public boolean execute(Object... data) {
 
-		for (Node<?> node: this.getNodes()){
+		for (Node<?,?> node: this.getNodes()){
 			if (node.execute(data) == false){
 				return false;
 			}

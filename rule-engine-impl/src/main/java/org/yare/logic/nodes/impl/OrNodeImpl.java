@@ -12,7 +12,7 @@ import org.yare.api.Node;
  * @author brad messerle
  * @since 2013
  */
-public class OrNodeImpl<V> extends LogicNodeImpl<V> {
+public class OrNodeImpl<T,V> extends LogicNodeImpl<T,V> {
 
 	
 	/* (non-Javadoc)
@@ -20,7 +20,7 @@ public class OrNodeImpl<V> extends LogicNodeImpl<V> {
 	 */
 	public boolean execute(Object... data) {
 
-		for (Node<?> node: this.getNodes()){
+		for (Node<?,?> node: this.getNodes()){
 			if (node.execute(data) == true){
 				return true;
 			}

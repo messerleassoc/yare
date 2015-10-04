@@ -17,7 +17,7 @@ public interface Rule {
 	 *
 	 * @return the nodes
 	 */
-	ArrayList<Node<?>> getNodes();
+	ArrayList<Node<?,?>> getNodes();
 	
 	
 	/**

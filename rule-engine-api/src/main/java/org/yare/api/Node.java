@@ -9,9 +9,10 @@ import java.util.ArrayList;
  * @author bradmesserle
  * @since 2013
  *
+ * @param <T> object type 
  * @param <V> the value type
  */
-public interface Node<V> {
+public interface Node<T,V> {
 
 	/**
 	 * Execute.
@@ -19,7 +20,7 @@ public interface Node<V> {
 	 * @param data the data
 	 * @return true, if successful
 	 */
-	 boolean execute(Object... data);
+	 boolean execute(final Object... data);
 	
 	/**
 	 * Gets the value.
@@ -41,7 +42,7 @@ public interface Node<V> {
 	 *
 	 * @return the nodes
 	 */
-	 ArrayList<Node<?>> getNodes();
+	 ArrayList<Node<?,?>> getNodes();
 	
 	
 }

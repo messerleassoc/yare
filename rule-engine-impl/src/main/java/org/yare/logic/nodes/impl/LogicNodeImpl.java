@@ -13,20 +13,20 @@ import org.yare.api.Node;
  *
  * @param <V> the value type
  */
-public class LogicNodeImpl<V> implements Node<V> {
+public class LogicNodeImpl<T,V> implements Node<T,V> {
 
 	/** The value. */
 	private V value;
 
 	/** The nodes. */
-	private ArrayList<Node<?>> nodes = new ArrayList<Node<?>>();
+	private ArrayList<Node<?,?>> nodes = new ArrayList<Node<?,?>>();
 
 	/**
 	 * Gets the nodes.
 	 *
 	 * @return the nodes
 	 */
-	public ArrayList<Node<?>> getNodes() {
+	public ArrayList<Node<?,?>> getNodes() {
 		return nodes;
 	}
 
@@ -35,7 +35,7 @@ public class LogicNodeImpl<V> implements Node<V> {
 	 *
 	 * @param nodes the new nodes
 	 */
-	public void setNodes(ArrayList<Node<?>> nodes) {
+	public void setNodes(ArrayList<Node<?,?>> nodes) {
 		this.nodes = nodes;
 	}
 	

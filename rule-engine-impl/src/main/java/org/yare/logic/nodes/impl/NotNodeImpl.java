@@ -11,7 +11,7 @@ package org.yare.logic.nodes.impl;
  *
  * @param <V> the value type
  */
-public class NotNodeImpl<V> extends LogicNodeImpl<V> {
+public class NotNodeImpl<T,V> extends LogicNodeImpl<T,V> {
 	
 	/* (non-Javadoc)
 	 * @see org.yare.logic.nodes.impl.LogicNodeImpl#execute(java.lang.Object[])

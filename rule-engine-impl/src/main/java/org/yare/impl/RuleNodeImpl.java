@@ -13,16 +13,16 @@ import org.yare.api.RuleNode;
  * @author bradmesserle
  * @since 2013
  */
-public class RuleNodeImpl implements RuleNode {
+public class RuleNodeImpl<T,V> implements RuleNode<T,V> {
 
 	/** The observable class. */
-	private Class<?> observableClass;
+	private Class<T> observableClass;
 
 	/** The field name. */
 	private String fieldName;
 
 	/** The value. */
-	private Object value;
+	private V value;
 	
 	/** The conditional. */
 	private Condition conditional;
@@ -33,7 +33,7 @@ public class RuleNodeImpl implements RuleNode {
 	 *
 	 * @return the observable class
 	 */
-	public final Class<?> getObservableClass() {
+	public final Class<T> getObservableClass() {
 		return observableClass;
 	}
 
@@ -42,7 +42,7 @@ public class RuleNodeImpl implements RuleNode {
 	 *
 	 * @param observableClass the new observable class
 	 */
-	public final void setObservableClass(final Class<?> observableClass) {
+	public final void setObservableClass(final Class<T> observableClass) {
 		this.observableClass = observableClass;
 	}
 
@@ -85,14 +85,14 @@ public class RuleNodeImpl implements RuleNode {
 	/* (non-Javadoc)
 	 * @see org.yare.api.Node#getValue()
 	 */
-	public Object getValue() {
+	public V getValue() {
 		return value;
 	}
 
 	/* (non-Javadoc)
 	 * @see org.yare.api.Node#setValue(java.lang.Object)
 	 */
-	public void setValue(Object value) {
+	public void setValue(V value) {
 		this.value = value;
 	}
 
@@ -137,13 +137,12 @@ public class RuleNodeImpl implements RuleNode {
 		return this.execute(data[0]);
 	}
 
-	/**
-	 * Gets the nodes.
-	 *
-	 * @return the nodes
-	 */
-	public ArrayList<Node<?>> getNodes() {
+	@Override
+	public ArrayList<Node<?, ?>> getNodes() {
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 	
 }
