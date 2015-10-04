@@ -9,15 +9,10 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>java.rule.engine</groupId>
-	<artifactId>rule-engine-gui-parent</artifactId>
+	<artifactId>rule-engine-annotations</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>YARE - Yet Another Rule Engine - GUI Parent</name>
+	<packaging>jar</packaging>
+	<name>YARE - Yet Another Rule Engine - Annotations</name>
 
-
-	<modules>
-		<module>rule-engine-gui-domain</module>
-		<!-- <module>rule-engine-web</module> -->
-	</modules>
 
 </project>

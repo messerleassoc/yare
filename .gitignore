@@ -19,3 +19,6 @@ target
 /rule-engine-gui/rule-engine-gui-annotations/target
 
 /rule-engine-gui/rule-engine-annotations/target
+/.DS_Store
+
+/.settings
