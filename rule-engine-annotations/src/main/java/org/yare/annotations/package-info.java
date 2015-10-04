@@ -4,4 +4,4 @@
  * @author bradmesserle
  *
  */
-package org.yare.gui.annotations;
+package org.yare.annotations;

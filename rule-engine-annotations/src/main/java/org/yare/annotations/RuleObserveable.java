@@ -1,13 +1,20 @@
-package org.yare.gui.annotations;
+/**
+ * 
+ */
+package org.yare.annotations;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
+import java.lang.annotation.ElementType;
 
-@Target({ElementType.FIELD, ElementType.METHOD})
+/**
+ * @author Brad Messerle
+ *
+ */
+@Target(value={ElementType.TYPE})
 @Retention(value=java.lang.annotation.RetentionPolicy.RUNTIME)
 @Documented
-public @interface RuleAttribute {
+public @interface RuleObserveable {
 
 }
