@@ -22,3 +22,9 @@ target
 /.DS_Store
 
 /.settings
+
+/rule-engine-annotations/bin
+
+/rule-engine-api/.settings
+
+/rule-engine-api/target

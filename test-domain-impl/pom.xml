@@ -29,7 +29,7 @@
 
 		<dependency>
 			<groupId>java.rule.engine</groupId>
-			<artifactId>rule-engine-gui-annotations</artifactId>
+			<artifactId>rule-engine-annotations</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

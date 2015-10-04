@@ -1,9 +1,9 @@
 package gov.va.domain.impl;
 
-import org.yare.gui.annotations.RuleAttribute;
-import org.yare.gui.annotations.RuleObserveable;
+import org.yare.annotations.RuleAttribute;
+import org.yare.annotations.RuleObservable;
 
-@RuleObserveable
+@RuleObservable
 public class VetAddress {
 
 	@RuleAttribute
